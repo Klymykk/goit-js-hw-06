@@ -1,1 +1,15 @@
+const form = document.querySelector(".login-form");
+form.addEventListener("submit", inSubmit);
+function inSubmit (evt) {
+    evt.preventDefault();
+    const { elements: { email, password }} = evt.currentTarget;
+    if(email.value.length && password.value.length){
+      alert("Заповніть всі поля")
+    } else{
+        const data = {
+            [email.value] : password.value
+        }
+        console.log(data);
+    }
 
+};
