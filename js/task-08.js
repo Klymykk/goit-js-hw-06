@@ -7,7 +7,8 @@ function inSubmit (evt) {
       return alert("Заповніть всі поля")
     } else{
         const data = {
-            [email.value] : password.value
+            email: email.value,
+            password : password.value
         }
         console.log(data);
         form.reset();
